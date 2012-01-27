@@ -1,0 +1,10 @@
+/*
+Theme Name:     Yoko-tresiyo
+Theme URI:      http: //tresiyo.com/blog
+Description:    Child theme for the Yoko theme
+Author:         Antonio J. García Lagar
+Author URI:     http: //aj.garcialagar.es/
+Template:       yoko
+Version:        0.1.0
+*/
+@import url('../yoko/style.css');
