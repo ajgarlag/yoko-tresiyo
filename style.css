@@ -5,6 +5,29 @@ Description:    Child theme for the Yoko theme
 Author:         Antonio J. García Lagar
 Author URI:     http: //aj.garcialagar.es/
 Template:       yoko
-Version:        0.1.0
+Version:        0.2.0
 */
 @import url('../yoko/style.css');
+@media screen {
+    #site-title h1 {
+        display: none;
+    }
+    
+    nav#subnav ul.menu li.menu-item {
+        text-align: center;
+        border-right: 1px dotted #69AE5B;
+    }
+    
+    #menu-item-37 {
+        border-left: 1px dotted #69AE5B;
+    }
+    
+    nav#subnav ul.menu li.menu-item a {
+        font-size: 0.7em;
+    }
+    
+    div.single-entry-content,
+    div.entry-content {
+        text-align: justify;
+    }
+}
