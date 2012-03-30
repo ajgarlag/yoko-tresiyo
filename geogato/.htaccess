@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteBase /blog/wp-content/themes/yoko-tresiyo/geogato
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule \d{2}\.png$ index.php
