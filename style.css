@@ -12,22 +12,57 @@ Version:        0.2.0
     #site-title h1 {
         display: none;
     }
-    
+
+    nav#subnav ul.menu {
+        padding-bottom: 16px;
+    }
+
     nav#subnav ul.menu li.menu-item {
         text-align: center;
         border-right: 1px dotted #69AE5B;
+        width: 14%;
     }
-    
-    #menu-item-37 {
-        border-left: 1px dotted #69AE5B;
+
+    nav#subnav ul.menu li.menu-item.last {
+        border-right: 0;
     }
-    
+
     nav#subnav ul.menu li.menu-item a {
         font-size: 0.7em;
     }
-    
+
     div.single-entry-content,
     div.entry-content {
         text-align: justify;
     }
+
+    aside h3 {
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+
+    aside div.entry-content {
+        border-bottom: 1px dotted #69AE5B;
+    }
+}
+/* Media queries for responsive design
+--------------------------------------------- */
+/* --- iPad Landscape --- */
+@media screen and (max-width: 1024px) {
+    nav#subnav ul.menu li.menu-item a {
+        font-size: 0.6em;
+    }
+}
+/* --- iPad Portrait --- */
+@media screen and (max-width: 880px) {
+    nav#subnav ul.menu li.menu-item {
+        width: 100%;
+    }
+    nav#subnav ul.menu li.menu-item a {
+        font-size: 0.7em;
+        float: none;
+    }
+}
+/* --- Smartphones and small Tablet PCs --- */
+@media screen and (max-width : 620px) {
 }
