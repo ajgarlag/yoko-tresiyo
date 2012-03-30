@@ -61,25 +61,37 @@
 				// Houston, we have a new header image!
 						echo get_the_post_thumbnail( $post->ID , array(1102,250), array('class' => 'headerimage'));
 						elseif ( get_header_image() ) : ?>
+                                                <a href="<?php echo home_url( '/' ); ?>">
 						<img src="<?php
+                                                                $himg_title = "Volver a inicio";
                                                                 if (is_category('parecidos-razonables')) {
                                                                     echo $_wp_default_headers['parecidos-razonables']['url'];
+                                                                    $himg_description = $_wp_default_headers['parecidos-razonables']['description'];
                                                                 } elseif(is_category('parecidos-razonados')) {
                                                                     echo $_wp_default_headers['parecidos-razonados']['url'];
+                                                                    $himg_description = $_wp_default_headers['parecidos-razonados']['description'];
                                                                 } elseif(is_category('y-como-se-hace')) {
                                                                     echo $_wp_default_headers['y-como-se-hace']['url'];
+                                                                    $himg_description = $_wp_default_headers['y-como-se-hace']['description'];
                                                                 } elseif(is_category('daguerrotipo')) {
                                                                     echo $_wp_default_headers['daguerrotipo']['url'];
+                                                                    $himg_description = $_wp_default_headers['daguerrotipo']['description'];
                                                                 } elseif(is_category('diseccion')) {
                                                                     echo $_wp_default_headers['diseccion']['url'];
+                                                                    $himg_description = $_wp_default_headers['diseccion']['description'];
                                                                 } elseif(is_category('evolucion')) {
                                                                     echo $_wp_default_headers['evolucion']['url'];
+                                                                    $himg_description = $_wp_default_headers['evolucion']['description'];
                                                                 } elseif(is_category('pildoras-de-viaje')) {
                                                                     echo $_wp_default_headers['pildoras-de-viaje']['url'];
+                                                                    $himg_description = $_wp_default_headers['pildoras-de-viaje']['description'];
                                                                 } else {
                                                                     header_image();
+                                                                    $himg_description = "TRESiYO";
+                                                                    $himg_title = "Inicio";
                                                                 }
-                                                          ?>" class="headerimage" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" /><!-- end headerimage -->
+                                                          ?>" class="headerimage" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="<?php echo $himg_description ?>" title="<?php echo $himg_title ?>" /><!-- end headerimage -->
+                                                </a>
 					<?php endif; ?>
 					<div class="clear"></div>
 
